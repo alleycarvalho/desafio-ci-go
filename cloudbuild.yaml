@@ -1,0 +1,6 @@
+steps:
+
+- id: 'Compilando a aplicação'
+  name: 'gcr.io/cloud-builders/go'
+  args: ['install', 'calculadora']
+  env: ['GOPATH=.']
