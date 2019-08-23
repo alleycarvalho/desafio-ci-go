@@ -4,3 +4,8 @@ steps:
   name: 'gcr.io/cloud-builders/go'
   args: ['install', 'calculadora']
   env: ['GOPATH=.']
+
+- id: 'Executar o teste unitário'
+  name: 'gcr.io/cloud-builders/go'
+  args: ['test', '-v', './...']
+  env: ['GOPATH=.']
