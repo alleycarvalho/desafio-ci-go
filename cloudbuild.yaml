@@ -17,3 +17,6 @@ steps:
     - '-t'
     - 'gcr.io/$PROJECT_ID/calculadora:latest'
     - '.'
+
+images:
+  - 'gcr.io/$PROJECT_ID/calculadora:latest'
