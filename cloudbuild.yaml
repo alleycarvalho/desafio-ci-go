@@ -5,9 +5,14 @@ steps:
   args: ['install', 'calculadora']
   env: ['GOPATH=.']
 
-- id: 'Executar o teste unitário'
+- id: 'Executando o teste unitário'
   name: 'gcr.io/cloud-builders/go'
   args: ['test', '-v', './...']
+  env: ['GOPATH=.']
+
+- id: 'Executando aplicação'
+  name: "gcr.io/cloud-builders/go"
+  args: ['run', 'calculadora']
   env: ['GOPATH=.']
 
 - id: 'Registrando a imagem'
