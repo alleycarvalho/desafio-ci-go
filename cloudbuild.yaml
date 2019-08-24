@@ -10,6 +10,11 @@ steps:
   args: ['test', '-v', './...']
   env: ['GOPATH=.']
 
+- id: 'Executando aplicação'
+  name: "gcr.io/cloud-builders/go"
+  args: ['run', 'calculadora']
+  env: ['GOPATH=.']
+
 - id: 'Registrando a imagem'
   name: 'gcr.io/cloud-builders/docker'
   args:
